@@ -6,20 +6,20 @@ Adafruit_INA219 ina219_Shinyei(0x41);
 Adafruit_INA219 ina219_MQ131(0x44);
 
 
-  float shuntvoltage_DHT;
-  float busvoltage_DHT;
-  float current_mA_DHT;
-  float loadvoltage_DHT;
+  double  shuntvoltage_DHT;
+  double  busvoltage_DHT;
+  double current_mA_DHT;
+  double loadvoltage_DHT;
 
-  float shuntvoltage_Shinyei;
-  float busvoltage_Shinyei;
-  float current_mA_Shinyei;
-  float loadvoltage_Shinyei;
+  double shuntvoltage_Shinyei;
+  double busvoltage_Shinyei;
+  double current_mA_Shinyei;
+  double loadvoltage_Shinyei;
   
-  float shuntvoltage_MQ131;
-  float busvoltage_MQ131;
-  float current_mA_MQ131;
-  float loadvoltage_MQ131;
+  double shuntvoltage_MQ131;
+  double busvoltage_MQ131;
+  double current_mA_MQ131;
+  double loadvoltage_MQ131;
   
 void setup(void) 
 {
@@ -35,18 +35,18 @@ void setup(void)
   
   //pinMode( D0, INPUT);
   
-  Spark.variable("shuntVoltageDHT", &shuntvoltage_DHT, DOUBLE);
-  Spark.variable("busVoltageDHT", &busvoltage_DHT, DOUBLE);
+  Spark.variable("shuntVoltDHT", &shuntvoltage_DHT, DOUBLE);
+  Spark.variable("busVoltDHT", &busvoltage_DHT, DOUBLE);
   Spark.variable("currentmaDHT", &current_mA_DHT, DOUBLE);
   //Spark.variable("loadVoltageDHT", &loadvoltage_DHT, DOUBLE);
   
-  Spark.variable("shuntVoltageShinyei", &shuntvoltage_Shinyei, DOUBLE);
-  Spark.variable("busVoltageShinyei", &busvoltage_Shinyei, DOUBLE);
-  Spark.variable("currentmaShinyei", &current_mA_Shinyei, DOUBLE);
+  Spark.variable("shuntVoltSh", &shuntvoltage_Shinyei, DOUBLE);
+  Spark.variable("busVoltSh", &busvoltage_Shinyei, DOUBLE);
+  Spark.variable("currentmaSh", &current_mA_Shinyei, DOUBLE);
   //Spark.variable("loadVoltageShinyei", &loadvoltage_Shinyei, DOUBLE);
   
-  Spark.variable("shuntVoltageMQ", &shuntvoltage_MQ131, DOUBLE);
-  Spark.variable("busVoltageMQ", &busvoltage_MQ131, DOUBLE);
+  Spark.variable("shuntVoltMQ", &shuntvoltage_MQ131, DOUBLE);
+  Spark.variable("busVoltMQ", &busvoltage_MQ131, DOUBLE);
   Spark.variable("currentmaMQ", &current_mA_MQ131, DOUBLE);
   //Spark.variable("loadVoltageMQ", &loadvoltage_MQ131, DOUBLE);
 }
